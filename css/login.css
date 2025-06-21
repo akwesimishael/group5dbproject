@@ -1,0 +1,215 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100vw;
+    overflow-x: hidden;
+}
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Roboto", sans-serif;
+    gap: 10px;
+    width: 100vw;
+    height: 50px;
+    background-color: rgb(13, 23, 139);   
+}
+.header img{
+    height: 90%;
+    width: auto;
+    object-fit: contain;
+}
+.header h3{
+    color: #fff;
+    text-transform: uppercase;
+}
+/* containg div for form */
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-color:  #f0f4f8;
+    font-family: "Roboto", sans-serif;
+}
+.login-form{
+    background: linear-gradient( #1e3a8a, #3b82f6);
+    width: 90%;
+    max-width: 500px;
+    border-radius: 1em;
+    padding: 30px;
+    box-shadow: 2px 2px 15px #000;
+}
+.login-form h1{
+    text-align: center;
+    color: #fff;
+    font-size: 3em;
+    font-weight: 600;
+}
+.indexfield{
+    width: 100%;
+    height: 40px;
+    position: relative;
+    background-color: transparent;
+    margin: 30px 0;
+}
+.indexfield input{
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #000;
+    border-radius: 40px;
+    outline: none;
+    color: #fff;
+    padding-left: 20px;
+    font-size: 1em;
+}
+.indexfield input::placeholder{
+    color: #ffffff84;
+}
+.indexfield input:focus, .indexfield input:active{
+    border: 2px solid #fff;
+    transition: 0.5s ease;
+}
+.indexfield img{
+    position: absolute;
+    width: 20px;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.selectfield{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin: 30px 0;
+}
+.selectfield label{
+    display: inline-block;
+    color: #ffffff;
+    font-weight: bold;
+    margin-bottom: 8px;
+    text-align: left;
+    padding-top: 9px;
+}
+.selectfield select{
+    width: 50%;
+    padding: 9px;
+    border-radius: 20px;
+    border: 2px solid #ffffff;
+    background-color: #ffffff;
+    color: #333;
+    font-size: 1em;
+    outline: none;
+    transition: border 0.3s ease;
+    appearance: none; /* Remove default arrow styling */  
+    text-align: center;
+}
+.selectfield select:focus {
+  border-color: #3b82f6;
+}
+.forgotpass{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    height: 30px;
+    font-size: 14px;
+    color: #fff;
+}
+.forgotpass label input{
+    accent-color: #fff;
+    margin-right: 7px;
+}
+.forgotpass a{
+    text-decoration: none;
+    color: #fff;
+    margin-right: 10px;
+}
+.forgotpass a:hover{
+    text-decoration: underline;
+}
+.loginbutton{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    background-color: #fff;
+    width: 80%;
+    height: 30px;
+    border: 2px solid #000;
+    border-radius: 30px;
+    padding: 20px 0;
+    font-size: 1.2em;
+    margin: 0 auto;
+    transition: 0.5s ease;
+}
+.loginbutton:hover{
+    background-color: #cbd7fa;
+}
+.loginbutton:focus{
+    background-color: #000;
+    color: #fff;
+}
+
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(13, 23, 139);
+    flex-wrap: wrap;
+    width: 100%;
+    font-family: "Roboto", sans-serif;
+    gap: 0.8em;
+}
+.footer .col{
+    flex: 1;
+    min-width: 250px;
+    margin: auto 0;
+    padding-bottom: 10px;
+}
+.footer .col img{
+    width: 30%;
+    margin-left: 30%;
+    padding: 20px 0;
+}
+.footer .col p{
+    color: #fff;
+    font-size: 12px;
+    font-weight: 300;
+    text-align: center;
+}
+.footer .col h3{
+    text-align: center;
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: 600;
+    padding: 20px 0;
+}
+.footer .col li{
+    list-style: none;
+    padding-bottom: 5px;
+    text-align: center;
+}
+.footer .col a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+    
