@@ -114,3 +114,5 @@ INSERT INTO Registrations (StudentID, CourseID, Grade) VALUES (1019, 1, 'A');
 INSERT INTO Registrations (StudentID, CourseID, Grade) VALUES (1019, 3, 'A+');
 INSERT INTO Registrations (StudentID, CourseID, Grade) VALUES (1020, 4, 'B+');
 INSERT INTO Registrations (StudentID, CourseID, Grade) VALUES (1020, 2, 'A');
+
+select * from Students;
