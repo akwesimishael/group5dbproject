@@ -135,6 +135,16 @@ table .bodyrow{
     font-family: Arial, Helvetica, sans-serif;
 }
 
+#logoutButton{
+    border: none;
+    background-color: rgb(13, 23, 139);
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
 /* footer for results page */
 .footer{
     display: flex;

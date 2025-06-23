@@ -18,28 +18,11 @@
         <div class="login-form">
             <form action="/login" method="post">
                 <h1>Login</h1>
-                <!-- students/teacher index number field box -->
+
+                <!-- students index number field box -->
                 <div class="indexfield">
                     <input name="indexNumber" type="text" placeholder="Enter your index number" required>
                     <img src="/media/key.png" alt="key">
-                </div>
-                <!-- password field  -->
-                <div class="indexfield">
-                    <input name="password" type="password" placeholder="Enter your Password">
-                    <img src="/media/lock.png" alt="padlock">
-                </div>
-                <!-- dropdown selection for student/lecturer -->
-                 <div class="selectfield">
-                    <label>Login as:</label>
-                    <select name="role">
-                        <option value="#" selected>Student</option>
-                        <option value="#">Lecturer</option>
-                    </select>
-                 </div>
-                <!-- forgot password section -->
-                <div class="forgotpass">
-                    <label><input type="checkbox">Remember Me</label>
-                    <a href="forgotpass.html" target="_blank">Forgot Password</a>
                 </div>
                 
                 <button type="submit" class="loginbutton">Login</button>
