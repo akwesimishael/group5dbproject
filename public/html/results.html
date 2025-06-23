@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/media/Picture1.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/results.css">
+    <title>Gctu students Portal</title>
+</head>
+<body>
+    <!-- Header for Results page -->
+    <div class="header">
+        <img src="/media/Picture1.png" alt="school-logo">
+        <h3>Ghana Communication Technology University</h3>
+    </div>
+
+    <!-- results go here -->
+    <div class="results">
+        <form action="#">
+            <h1>University Results Portal</h1>
+            <!-- students name, department and level go here -->
+            <div class="studentinfo">
+                <div class="name">
+                    <img src="/media/user-solid.svg" alt="user-icon">
+                    <p>Student Name:  <span id="studentName"></span></p>
+                </div>
+            </div>
+            <div class="studentdetails">
+                <p class="align">Student ID:  </p>
+                <p><span id="studentID"></span></p>
+            </div>
+            <div class="studentdetails">
+                <p class="align">Department:  </p>
+                <p><span id="departmentName"></span></p>
+            </div>
+
+            <!-- table to display results -->
+             <table>
+                <thead>
+                    <tr class="headrow">
+                        <th>Course Code</th>
+                        <th>Course Name</th>
+                        <th>Grade</th>
+                    </tr>
+                </thead>
+
+                <tbody id="studentResults">
+                    <!-- data added here dynamically by js -->
+                </tbody>
+             </table>
+            <div class="buttons">
+                <button>Download PDF</button>
+                <a href="#">Email Result</a>
+            </div> 
+        </form>
+    </div>
+
+    <button id="logoutButton" class="buttons">Logout</button>
+
+    <!-- footer -->
+      <div class="footer">
+        <!-- column1 -->
+         <div class="col">
+            <img src="/media/Picture1.png" alt="gctu logo">
+            <p>2023 All Rights Reserved. Ghana Communication Technology University (GCTU)</p>
+         </div>
+        <!-- column2  -->
+         <div class="col">
+            <h3>IT Support Desk</h3>
+            <ul>
+                <li><a href="#">Center for Online Learning and Teaching(COLT)</a></li>
+                <li><a href="#"><span>Website </span>https://colt.gctu.edu.gh</a></li>
+                <li><a href="#"><span>Email: </span>colt@gctu.edu.gh</a></li>
+                <li><a href="#"><span>Phone: </span> 0302984005</a></li>
+            </ul>
+         </div>
+        <!-- column3  -->
+         <div class="col">
+            <h3>About</h3>
+            <ul>
+                <li><a href="#">News</a></li>
+                <li><a href="#">Learning Platform</a></li>
+                <li><a href="#">Programmes</a></li>
+                <li><a href="#">Location</a></li>
+            </ul>
+         </div>
+      </div>
+     
+</body>
+<script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const studentID = urlParams.get('studentID');
+
+    if (studentID) {
+        fetch(`/student/${studentID}`)
+            .then(response => response.json())
+            .then(data => {
+                // Display student info
+                document.getElementById('studentName').innerText = data.student.StudentName;
+                document.getElementById('studentID').innerText = data.student.StudentID;
+                document.getElementById('departmentName').innerText = data.student.DepartmentName;
+
+                // Display student courses and grades
+                let tableRows = '';
+                data.results.forEach(item => {
+                    tableRows += `
+                        <tr class="bodyrow">
+                            <td>${item.CourseID}</td>
+                            <td>${item.CourseName}</td>
+                            <td>${item.Grade}</td>
+                        </tr>
+                    `;
+                });
+                document.getElementById('studentResults').innerHTML = tableRows;
+            })
+            .catch(error => {
+                console.error('Error fetching student data:', error);
+            });
+    } else {
+        alert('No student ID provided.');
+    }
+
+    // Logout user
+    document.getElementById('logoutButton').addEventListener('click', () => {
+        window.location.replace('/html/login.html');
+    });
+</script>
+</html>

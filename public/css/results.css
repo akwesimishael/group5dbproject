@@ -1,0 +1,192 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100vw;
+    overflow-x: hidden;
+}
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Roboto", sans-serif;
+    gap: 10px;
+    width: 100vw;
+    height: 50px;
+    background-color: rgb(13, 23, 139);   
+}
+.header img{
+    height: 90%;
+    width: auto;
+    object-fit: contain;
+}
+.header h3{
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.results{
+    width: 100%;
+    height: 100vh;
+    background-color: #f0f4f8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.results form{
+    background-color: rgb(239, 239, 239);
+    border-radius: 15px;
+    overflow: hidden;
+    min-width: 450px;
+    max-width: 500px;
+}
+.results form h1{
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.6em;
+    background-color: rgb(13, 23, 139);
+    padding: 10px 15px;
+    text-align: center;
+}
+.studentinfo .name{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin: 15px 0;
+}
+.studentinfo .name img{
+    width: 40px;
+    margin-left: 15px;
+    background-color: rgb(201, 201, 202);
+    padding: 8px;
+    border-radius: 50%;
+}
+.studentinfo .name p{
+    margin-right: 15px;
+    font-size: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.studentinfo .studentdetails{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.studentdetails p{
+    text-align: center;
+    font-size: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+p.align{
+    padding: 5px 0;
+}
+.studentdetails span{
+    display: block;
+    width: 40%;
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.4);
+}
+table{
+    width: 100%;   
+    border-collapse: collapse;
+    margin: 10px 0;
+    height: 170px;
+    max-height: 230px;
+}
+table tr{
+    height: 50px;
+}
+table .headrow{
+    background-color: rgb(13, 23, 139);
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+table .bodyrow{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+.buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    margin: 10px;
+}
+.buttons button{
+    border: none;
+    background-color: rgb(13, 23, 139);
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+}
+.buttons a{
+    text-decoration: none;
+    color: rgb(13, 23, 139);
+    background-color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#logoutButton{
+    border: none;
+    background-color: rgb(13, 23, 139);
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+/* footer for results page */
+.footer{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(13, 23, 139);
+    flex-wrap: wrap;
+    width: 100%;
+    font-family: "Roboto", sans-serif;
+    gap: 0.8em;
+}
+.footer .col{
+    flex: 1;
+    min-width: 250px;
+    margin: auto 0;
+    padding-bottom: 10px;
+}
+.footer .col img{
+    width: 30%;
+    margin-left: 30%;
+    padding: 20px 0;
+}
+.footer .col p{
+    color: #fff;
+    font-size: 12px;
+    font-weight: 300;
+    text-align: center;
+}
+.footer .col h3{
+    text-align: center;
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: 600;
+    padding: 20px 0;
+}
+.footer .col li{
+    list-style: none;
+    padding-bottom: 5px;
+    text-align: center;
+}
+.footer .col a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    cursor: pointer;
+}

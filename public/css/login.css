@@ -139,6 +139,7 @@ body{
 }
 .loginbutton{
     text-decoration: none;
+    border: none;
     display: flex;
     align-items: center;
     justify-content: center;
